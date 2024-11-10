@@ -18,7 +18,7 @@ export default function CreateListing() {
     name: '',
     description: '',
     address: '',
-    type: 'rent',
+    type: 'stay',
     bedrooms: 1,
     bathrooms: 1,
     regularPrice: 50,
@@ -166,7 +166,7 @@ export default function CreateListing() {
             className='border p-3 rounded-lg'
             id='name'
             maxLength='62'
-            minLength='10'
+            minLength='2'
             required
             onChange={handleChange}
             value={formData.name}
@@ -198,7 +198,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'sale'}
               />
-              <span>Sell</span>
+              <span>Stay</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -369,3 +369,4 @@ export default function CreateListing() {
     </main>
   );
 }
+

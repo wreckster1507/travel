@@ -54,6 +54,9 @@ const listingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    bookedBy: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
@@ -61,3 +64,55 @@ const listingSchema = new mongoose.Schema(
 const Listing = mongoose.model('Listing', listingSchema);
 
 export default Listing;
+
+// import mongoose from 'mongoose';
+
+// const listingSchema = new mongoose.Schema(
+//   {
+//     name: {
+//       type: String,
+//       required: true,
+//     },
+//     description: {
+//       type: String,
+//       required: true,
+//     },
+//     location: {
+//       type: String, // e.g., "Paris, France"
+//       required: true,
+//     },
+//     pricePerNight: {
+//       type: Number,
+//       required: true,
+//     },
+//     amenities: {
+//       type: [String], // e.g., ["WiFi", "Pool"]
+//     },
+//     rating: {
+//       type: Number,
+//       default: 0,
+//     },
+//     isAvailable: {
+//       type: Boolean,
+//       default: true,
+//     },
+//     type: {
+//       type: String,
+//       enum: ['Hotel', 'Hostel', 'Resort', 'Vacation Rental', 'Attraction'],
+//       required: true,
+//     },
+//     images: {
+//       type: [String], // Array of image URLs
+//     },
+//     createdBy: {
+//       type: mongoose.Schema.Types.ObjectId,
+//       ref: 'User',
+//       required: true,
+//     },
+//   },
+//   { timestamps: true }
+// );
+
+// const Listing = mongoose.model('Listing', listingSchema);
+
+// export default Listing;

@@ -9,6 +9,7 @@ import { app } from '../firebase';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 export default function CreateListing() {
   const { currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -214,7 +215,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'sale'}
               />
-              <span>Sell</span>
+              <span>Stay</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -384,3 +385,5 @@ export default function CreateListing() {
     </main>
   );
 }
+
+
